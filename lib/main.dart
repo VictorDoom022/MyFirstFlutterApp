@@ -5,12 +5,24 @@ void main() => runApp(MaterialApp(
     appBar: AppBar(
       title: Text('My First App'),
       centerTitle: true,
+      backgroundColor: Colors.red[600],
     ),
     body: Center(
-      child: Text('Hello Flutter'),
+      child: Text(
+        'Hello Flutter',
+        style: TextStyle(
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2.0,
+          color: Colors.grey[600],
+          fontFamily: 'ComicNeue',
+        ),
+      ),
     ),
     floatingActionButton: FloatingActionButton(
+      onPressed: (){},
       child: Text('click'),
+      backgroundColor: Colors.red[600],
     ),
   ),
 
