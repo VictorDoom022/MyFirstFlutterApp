@@ -1,4 +1,5 @@
 import 'package:brewcrew/services/auth.dart';
+import 'package:brewcrew/shared/contants.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -46,6 +47,7 @@ class _SignInState extends State<SignIn> {
             children: <Widget>[
               SizedBox(height: 20),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Email'),
                 validator: (val)=>val.isEmpty ? 'Enter an E-mail' : null,
                 onChanged: (val){
                   setState(() {
@@ -55,6 +57,7 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(height: 20),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Password'),
                 validator: (val)=>val.length < 6 ? 'Enter a password more than 6 words long' : null,
                 obscureText: true,
                 onChanged: (val){
